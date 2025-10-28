@@ -75,7 +75,7 @@ export function useQuiz() {
       try {
         const res = await fetch("/data/questions.json");
         const data = await res.json();
-        dispatch({ type: "dataRecived", payload: data });
+        dispatch({ type: "dataRecived", payload: data.questions });
       } catch {
         dispatch({ type: "dataFailed" });
       }
