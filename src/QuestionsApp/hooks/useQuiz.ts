@@ -73,7 +73,7 @@ export function useQuiz() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const res = await fetch("http://localhost:8000/questions");
+        const res = await fetch("/data/questions.json");
         const data = await res.json();
         dispatch({ type: "dataRecived", payload: data });
       } catch {
